@@ -1,7 +1,8 @@
 # No Wait
-
+[Go visit No Wait](https://rh-itp405-final.herokuapp.com)
+[Govisit my heroku app: assignment8](https://hern784-itp405.herokuapp.com/)
 <ol>
-   <li>[Go visit No Wait](https://rh-itp405-final.herokuapp.com)</li>
+   <li></li>
    <li>[Checkout the walkthrough](https://usc.zoom.us/rec/play/_81DWbUnJ5wUZVhW7xB5TQEVj2u1QDGAfQNWKX6tFfs-4oNXfS_RXeQwbqDpntf6vUKRtEPyFZKi2Wqn.FRjDEg7Wn9sFfg-_?continueMode=true)</li>
 </ol>
 
