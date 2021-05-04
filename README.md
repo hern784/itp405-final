@@ -1,7 +1,7 @@
 # No Wait
 
 <ol>
-   <li>[Go visit No wait](rh-itp405-final.herokuapp.com)</li>
+   <li>[Go visit Nowait](http://rh-itp405-final.herokuapp.com)</li>
    <li>[Checkout the walkthrough](https://usc.zoom.us/rec/play/_81DWbUnJ5wUZVhW7xB5TQEVj2u1QDGAfQNWKX6tFfs-4oNXfS_RXeQwbqDpntf6vUKRtEPyFZKi2Wqn.FRjDEg7Wn9sFfg-_?continueMode=true)</li>
 </ol>
 
