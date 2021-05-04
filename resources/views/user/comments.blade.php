@@ -4,7 +4,7 @@
 
 @section('content')
     @if ($coms->count() === 0)
-        No comointments, search for business to make comointment
+        No comments, search for business to make comointment
     @else
         <table class="table table-striped">
             <thead>

@@ -54,6 +54,7 @@ class AuthBusinessController extends Controller
         $business->current = 0;
         $business->open = $request->input('open');
         $business->close = $request->input('close');
+        $business->user_id = $user->id;
         $business->save();
 
 

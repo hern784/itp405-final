@@ -20,8 +20,8 @@ class UserController extends Controller
 
         return view('user.profile', [
             'user' => Auth::user(),
-            'apps' => Appointment::get(),
-            'coms' => Comment::get()
+            'apps' => Appointment::where('user_id', '=', Auth::user()->id)->get(),
+            'coms' => Comment::where('user_id', '=', Auth::user()->id)->get()
         ]);
     }
 
@@ -29,7 +29,7 @@ class UserController extends Controller
     {
         return view('user.appointments', [
             'user' => Auth::user(),
-            'apps' => Appointment::get()
+            'apps' => Appointment::where('user_id', '=', Auth::user()->id)->get()
         ]);
     }
 
@@ -37,7 +37,7 @@ class UserController extends Controller
     {
         return view('user.comments', [
             'user' => Auth::user(),
-            'coms' => Comment::get()
+            'coms' => Comment::where('user_id', '=', Auth::user()->id)->get()
         ]);
     }
 }

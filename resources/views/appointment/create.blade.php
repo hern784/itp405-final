@@ -24,7 +24,6 @@
             type="time" 
             name="time" 
             id="time"
-            step="1800"
             placeholder="12:00">
             Business hours: {{$business->open}}AM - {{$business->close}}PM
             @error('time')

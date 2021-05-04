@@ -16,17 +16,19 @@ class BusinessController extends Controller
 {
     public function index()
     {
+        $user = Auth::user();
+        $bus = Business::where('user_id', $user->id)->first();
         return view('business.profile', [
-            'user' => Auth::user(),
-            'bus' => Business::find(Auth::user()->id),
-            'apps' => Appointment::get(),
-            'coms' => Comment::get(),
+            'user' => $user,
+            'bus' => $bus,
+            'apps' => Appointment::where('bus_id', $bus->id)->get(),
+            'coms' => Comment::where('bus_id', $bus->id)->get(),
         ]);
     }
 
     public function update_capacity(Request $request)
     {
-        $bus = Business::find(Auth::user()->id);
+        $bus = Business::where('user_id', Auth::user()->id)->first();
         $bus->current = $request->input('current');
         $bus->save();
 
@@ -48,17 +50,21 @@ class BusinessController extends Controller
 
     public function appointments()
     {
+        $user = Auth::user();
+        $bus = Business::where('user_id', $user->id)->first();
         return view('business.appointments', [
             'user' => Auth::user(),
-            'apps' => Appointment::get()
+            'apps' => Appointment::where('bus_id', $bus->id)->get(),
         ]);
     }
 
     public function comments()
     {
+        $user = Auth::user();
+        $bus = Business::where('user_id', $user->id)->first();
         return view('business.comments', [
             'user' => Auth::user(),
-            'coms' => Comment::get()
+            'coms' => Comment::where('bus_id', $bus->id)->get(),
         ]);
     }
 }
