@@ -20,6 +20,10 @@ use App\Http\Controllers\CommentController;
 |
 */
 
+if (env('APP_ENV') !== 'local') {
+    URL::forceScheme('https');
+}
+
 Route::get('/', function () {
     return view('layouts.landing');
 });
